@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0 30px;
     font-size: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   &__items {
@@ -14,11 +14,44 @@
   }
 
   &__item {
-    padding-top: 50px;
     font-size: 17px;
     line-height: 20px;
     font-weight: bold;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  &__icon {
+    display: block;
+    min-height: 40px;
+    margin-bottom: 13px;
+
+    &--materials svg {
+      width: 33px;
+      height: 38px;
+    }
+    &--price svg {
+      width: 47px;
+      height: 27px;
+    }
+    &--likes svg {
+      width: 34px;
+      height: 27px;
+    }
+    &--love svg {
+      width: 35px;
+      height: 34px;
+    }
+    &--support svg {
+      width: 55px;
+      height: 23px;
+    }
+    &--box svg {
+      width: 33px;
+      height: 32px;
+    }
   }
   &__item:last-child {
     margin-bottom: 0;

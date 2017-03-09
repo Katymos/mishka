@@ -1,5 +1,8 @@
 .reviews {
-  margin-bottom: 90px;
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 38px;
+
   &__title {
     margin: 0;
     padding: 0 30px;
@@ -29,7 +32,10 @@
     height: 50px;
     border: 2px solid #444;
     box-sizing: border-box;
-    margin-bottom: 25px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-bottom: 40px;
 
     &--prev {
       margin-left: 30px;
@@ -40,5 +46,19 @@
       margin-right: 30px;
       border-left-width: 1px;
     }
+
+    & svg {
+      width: 51px;
+      height: 26px;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/zigzag.png);
+    height: 7px;
   }
 }

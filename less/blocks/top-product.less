@@ -1,5 +1,7 @@
 .top-product {
-  margin-bottom: 70px;
+  position: relative;
+  padding-bottom: 42px;
+  margin-bottom: 30px;
   &__title {
     margin: 0 0 18px 0;
     padding: 0 30px;
@@ -46,10 +48,21 @@
     font-size: 17px;
     line-height: 24px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/zigzag.png);
+    height: 7px;
   }
 }
 .btn {
+  display: block;
   text-align: center;
   text-transform: uppercase;
   background-color: transparent;
@@ -57,5 +70,5 @@
   font-weight: bold;
   border: 2px solid #444;
   padding: 7px 80px;
-  margin: 0 30px;
+  margin: 0 auto;
 }

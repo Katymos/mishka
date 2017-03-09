@@ -104,13 +104,25 @@
   }
 
   &__basket {
-    padding: 25px 0;
+    padding: 25px 30px;
     border-bottom: 1px solid #ececec;
 
     font-size: 17px;
     line-height: 24px;
     color: #000;
     font-weight: bold;
+    text-align: left;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+
+    & svg {
+      width: 21px;
+      height: 18px;
+    }
   }
 }
 .intro {
@@ -134,6 +146,7 @@
   }
 
   &__item {
+    position: relative;
     font-size: 19px;
     line-height: 24px;
     color: #fff;
@@ -147,6 +160,18 @@
 
     &--toys {
       background-color: #56c3b2;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      margin-top: -30px;
+
+      & svg {
+        width: 41px;
+        height: 61px;
+      }
     }
   }
 }
