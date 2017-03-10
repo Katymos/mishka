@@ -132,11 +132,18 @@
       </tr>
     </table>
 
-    <img src="/img/product-img.jpg" width="260" height="315" alt="Вязаные корзинки">
+    <div class="top-product__photo">
+      <picture>
+        <!--<source media="(min-width: 1150px)" srcset="img/panorama-desktop.jpg">-->
+        <source media="(min-width: 768px)" srcset="img/product-img-tablet.jpg">
+        <img src="img/product-img.jpg" alt="Вязаные корзинки">
+      </picture>
+    </div>
 
-    <div class="top-product__price">Цена: 990 руб.</div>
-
-    <button type="button" class="btn">Заказать</button>
+    <div class="top-product__order">
+      <div class="top-product__price">Цена: 990 руб.</div>
+      <button type="button" class="btn">Заказать</button>
+    </div>
 
   </div>
   <!-- End: Container -->
@@ -157,7 +164,7 @@
             <use xlink:href="#icon-features-1">
           </svg>
         </span>
-        Экологически чистые материалы
+        Экологически<br> чистые материалы
       </li>
       <li class="features__item">
         <span class="features__icon features__icon--price">
@@ -223,16 +230,18 @@
         Анастасия Красильникова
         <span>@misssssiskras</span>
       </div>
-      <span class="reviews__arrow reviews__arrow--prev">
-        <svg>
-          <use xlink:href="#icon-arrow-left">
-        </svg>
-      </span>
-      <span class="reviews__arrow reviews__arrow--next">
-        <svg>
-          <use xlink:href="#icon-arrow-right">
-        </svg>
-      </span>
+      <div class="reviews__arrows">
+        <span class="reviews__arrow reviews__arrow--prev">
+          <svg>
+            <use xlink:href="#icon-arrow-left">
+          </svg>
+        </span>
+        <span class="reviews__arrow reviews__arrow--next">
+          <svg>
+            <use xlink:href="#icon-arrow-right">
+          </svg>
+        </span>
+      </div>
       <button type="button" class="btn">Написать</button>
     </div>
     <!-- Start: Reviews__item -->
@@ -272,6 +281,11 @@
 
   <!-- Start: Container -->
   <div class="container">
+    <div class="page-footer__logo">
+      <a href="#">
+        <img src="img/logo-footer.svg" width="102" height="34" alt="Mishka">
+      </a>
+    </div>
     <div class="page-footer__social">
       <a class="page-footer__icon page-footer__icon--inst" href="#">
         <svg>
