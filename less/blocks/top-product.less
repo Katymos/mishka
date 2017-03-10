@@ -38,7 +38,7 @@
     }
   }
 
-  & img {
+  &__photo {
     padding: 0 30px;
     margin-bottom: 10px;
   }
@@ -71,4 +71,69 @@
   border: 2px solid #444;
   padding: 7px 80px;
   margin: 0 auto;
+}
+
+@media @tablet-width {
+  .top-product {
+    padding-bottom: 70px;
+    margin-bottom: 50px;
+
+    &__title {
+      margin: 0 0 50px 0;
+      padding: 0;
+      font-size: 43px;
+      line-height: 50px;
+
+      & span {
+        float: right;
+        width: 70px;
+        line-height: 17px;
+        text-align: center;
+        margin: 10px;
+      }
+    }
+
+    &__description {
+      padding: 0;
+      font-size: 17px;
+      line-height: 30px;
+      width: 44%;
+      margin-bottom: 37px;
+    }
+
+    &__table {
+      width: 44%;
+      padding: 0;
+      margin-bottom: 55px;
+    }
+
+    &__photo {
+      position: absolute;
+      top: 105px;
+      right: 50%;
+      transform: translateX(334px);
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    &__order {
+      width: 45%;
+      text-align: center;
+    }
+
+    &__price {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    & .btn {
+      margin: 0;
+      padding: 8px 95px;
+    }
+
+    &::after {
+      background-image: url(../img/zigzag-desktop.png);
+      height: 17px;
+    }
+  }
 }

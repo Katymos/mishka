@@ -28,6 +28,7 @@
   }
   &__arrow {
     display: inline-block;
+    vertical-align: middle;
     width: 130px;
     height: 50px;
     border: 2px solid #444;
@@ -62,3 +63,56 @@
     height: 7px;
   }
 }
+
+@media @tablet-width {
+  .reviews {
+    padding-bottom: 75px;
+    margin-bottom: 60px;
+
+    & .container {
+      background-image: url(../img/bg-reviews-tablet.png);
+      background-repeat: no-repeat;
+      padding: 75px 30px 25px;
+    }
+
+    &__title {
+      padding: 0;
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 48px;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 30px;
+      margin: 0 0 30px 0;
+    }
+    &__author {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 17px;
+      margin: 25px 0 30px;
+    }
+    &__arrows {
+      float: right;
+      margin: 30px 0;
+    }
+    &__arrow {
+      margin: 0;
+      border: none;
+      width: 85px;
+    }
+    & .btn {
+      position: absolute;
+      top: 78px;
+      right: 50%;
+      transform: translateX(334px);
+
+      padding: 7px 35px;
+    }
+    &::after {
+      background-image: url(../img/zigzag-desktop.png);
+      height: 17px;
+    }
+  }
+}
+

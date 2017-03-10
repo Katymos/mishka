@@ -32,3 +32,37 @@
     padding: 10px 49px;
   }
 }
+
+@media @tablet-width {
+  .contacts {
+    margin-bottom: 60px;
+
+    &__title {
+      padding: 0;
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 50px;
+    }
+    &__text {
+      .clearfix();
+      display: inline-block;
+      vertical-align: top;
+      padding: 0;
+      font-size: 17px;
+      margin-right: 85px;
+      margin-bottom: 30px;
+
+      &:nth-of-type(2) {
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+    }
+    &__map {
+      background-image: url(../img/bg-map-tablet.png);
+      margin-bottom: 50px;
+    }
+    & .btn {
+      padding: 9px 30px;
+    }
+  }
+}
