@@ -1,0 +1,35 @@
+{
+  "name": "mishka",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект «Мишка» от HTML Academy",
+  "author": "Екатерина Москивец",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Katymos/mishka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Katymos/mishka/issues"
+  },
+  "homepage": "https://github.com/Katymos/mishka",
+  "devDependencies": {
+    "autoprefixer": "6.3.3",
+    "editorconfig-tools": "0.1.1",
+    "grunt": "1.0.1",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-postcss": "0.7.2",
+    "grunt-svgmin": "^4.0.0",
+    "grunt-svgstore": "^1.0.0",
+    "load-grunt-tasks": "3.4.1"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *",
+    "build": "grunt less && grunt postcss",
+    "start": "npm run build && grunt serve"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  }
+}
