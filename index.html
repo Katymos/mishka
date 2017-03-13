@@ -40,7 +40,11 @@
 
       <div class="main-nav__logo">
         <a class="main-nav__logo-link">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Mishka">
+          </picture>
         </a>
       </div>
 
@@ -49,11 +53,18 @@
       <div class="main-nav__wrapper main-nav__wrapper--closed">
 
         <ul class="main-nav__list">
-          <li><a href="#">Каталог товаров</a></li>
-          <li><a href="#">Вязание на заказ</a></li>
+          <li class="main-nav__item"><a href="#">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+          <li class="main-nav__item main-nav__item--hidden"><a href="#">Новые поступления</a></li>
+          <li class="main-nav__item main-nav__item--hidden"><a href="#">Распродажа</a></li>
         </ul>
 
         <div class="main-nav__search">
+          <span class="main-nav__icon">
+            <svg>
+              <use xlink:href="#icon-search">
+            </svg>
+          </span>
           <form method="post" action="/" class="main-nav__search-form">
             <input type="search" name="search" placeholder="Поиск по сайту">
           </form>
@@ -65,11 +76,15 @@
               <use xlink:href="#icon-cart">
             </svg>
           </span>
-          Корзина: пока пуста</div>
+          Корзина: пока пуста
+        </div>
 
       </div>
 
+      <div class="main-nav__delivery">Бесплатная доставка по России</div>
+
     </nav>
+
   </div>
   <!-- End: Container -->
 
@@ -134,7 +149,7 @@
 
     <div class="top-product__photo">
       <picture>
-        <!--<source media="(min-width: 1150px)" srcset="img/panorama-desktop.jpg">-->
+        <source media="(min-width: 1150px)" srcset="img/product-img-desktop.jpg">
         <source media="(min-width: 768px)" srcset="img/product-img-tablet.jpg">
         <img src="img/product-img.jpg" alt="Вязаные корзинки">
       </picture>
