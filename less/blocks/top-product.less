@@ -71,6 +71,13 @@
   border: 2px solid #444;
   padding: 7px 80px;
   margin: 0 auto;
+
+  &:hover {
+    background-color: #444;
+    color: #fff;
+
+    transition: all 0.2s;
+  }
 }
 
 @media @tablet-width {
@@ -119,6 +126,64 @@
     &__order {
       width: 45%;
       text-align: center;
+    }
+
+    &__price {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    & .btn {
+      margin: 0;
+      padding: 8px 95px;
+    }
+
+    &::after {
+      background-image: url(../img/zigzag-desktop.png);
+      height: 17px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .top-product {
+    padding-top: 55px;
+    padding-bottom: 100px;
+    margin-bottom: 60px;
+
+    &__title {
+      position: relative;
+      font-size: 53px;
+      line-height: 57px;
+      z-index: 2;
+
+      & span {
+        float: left;
+        width: 125px;
+        margin: 20px;
+      }
+    }
+
+    &__description {
+      width: 28%;
+      padding-left: 175px;
+      margin-bottom: 50px;
+    }
+
+    &__table {
+      width: 44%;
+      padding-left: 175px;
+      margin-bottom: 105px;
+    }
+
+    &__photo {
+      top: 0;
+      transform: translateX(525px);
+    }
+
+    &__order {
+      width: 28%;
+      padding-left: 175px;
     }
 
     &__price {
