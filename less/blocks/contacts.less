@@ -9,8 +9,9 @@
   }
   &__text {
     .clearfix();
+    width: 260px;
     padding: 0 30px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 
     &:nth-of-type(2) {
       margin-bottom: 35px;
@@ -25,6 +26,7 @@
   &__map {
     background-image: url(../img/bg-map.png);
     background-repeat: no-repeat;
+    background-position: top center;
     height: 457px;
     margin-bottom: 40px;
   }
@@ -63,6 +65,74 @@
     }
     & .btn {
       padding: 9px 30px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .contacts {
+    position: relative;
+    padding: 95px 0 45px;
+
+    & .container {
+      .clearfix();
+    }
+
+    &__title {
+      position: relative;
+      font-size: 53px;
+      line-height: 57px;
+      padding-left: 175px;
+      margin-bottom: 50px;
+
+      &::before {
+        content: '';
+        background-image: url(../img/icon/icon-contacts.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 63px;
+        width: 47px;
+        height: 81px;
+      }
+    }
+    &__text {
+      .clearfix();
+      float: left;
+      width: 305px;
+      padding-left: 175px;
+      clear: both;
+      margin: 0 0 30px 0;
+
+      &:nth-of-type(2) {
+        margin-bottom: 50px;
+      }
+
+      & span {
+        width: 205px;
+        padding-left: 0;
+      }
+
+      &:nth-of-type(1) span {
+        border-bottom: 1px solid #62d1ba;
+      }
+    }
+
+    &__map {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      background-image: url(../img/bg-map-desktop.png);
+      width: 525px;
+      height: 457px;
+      transform: translateX(525px);
+    }
+
+    & .btn {
+      display: block;
+      padding: 10px 35px;
+      margin: 0 0 0 175px;
+      clear: both;
     }
   }
 }

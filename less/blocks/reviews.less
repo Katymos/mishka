@@ -9,23 +9,32 @@
     font-size: 25px;
     margin-bottom: 25px;
   }
+
   &__item {
     font-size: 0;
   }
+
   &__text {
     font-size: 15px;
     margin: 0 30px;
   }
+
   &__author {
     font-size: 18px;
     font-weight: bold;
     margin: 25px 30px 30px;
   }
+
   &__author span {
     display: block;
     margin: 0;
     font-weight: normal;
   }
+
+  &__arrows {
+    text-align: center;
+  }
+
   &__arrow {
     display: inline-block;
     vertical-align: middle;
@@ -53,6 +62,7 @@
       height: 26px;
     }
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -72,6 +82,7 @@
     & .container {
       background-image: url(../img/bg-reviews-tablet.png);
       background-repeat: no-repeat;
+      background-size: contain;
       padding: 75px 30px 25px;
     }
 
@@ -103,12 +114,52 @@
     }
     & .btn {
       position: absolute;
-      top: 78px;
+      top: 5px;
       right: 50%;
       transform: translateX(334px);
 
       padding: 7px 35px;
     }
+    &::after {
+      background-image: url(../img/zigzag-desktop.png);
+      height: 17px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .reviews {
+
+    & .container {
+      padding-bottom: 95px;
+    }
+
+    &__title {
+      padding-left: 175px;
+      font-size: 53px;
+      line-height: 57px;
+      margin-bottom: 48px;
+    }
+
+    &__text {
+      padding-left: 175px;
+      margin: 0 0 35px 0;
+    }
+
+    &__author {
+      padding-left: 175px;
+      margin: 0;
+    }
+
+    &__arrows {
+      margin: 10px 0;
+    }
+
+    & .btn {
+      top: 5px;
+      transform: translateX(525px);
+    }
+
     &::after {
       background-image: url(../img/zigzag-desktop.png);
       height: 17px;

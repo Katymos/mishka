@@ -9,7 +9,7 @@
     color: #000;
 
     & span {
-      display: inline-block;
+      display: block;
       vertical-align: bottom;
       font-size: 17px;
       color: #63d1bb;
@@ -24,9 +24,10 @@
   }
 
   &__table {
-    width: 100%;
-    padding: 0 30px;
-    margin-bottom: 30px;
+    width: 260px;
+    border-collapse: collapse;
+
+    margin: 0 auto 30px;
 
     & td {
       padding: 0 0 6px 0;
@@ -40,6 +41,7 @@
 
   &__photo {
     padding: 0 30px;
+    text-align: center;
     margin-bottom: 10px;
   }
 
@@ -71,6 +73,7 @@
   border: 2px solid #444;
   padding: 7px 80px;
   margin: 0 auto;
+  outline: none;
 
   &:hover {
     background-color: #444;
@@ -101,17 +104,17 @@
     }
 
     &__description {
-      padding: 0;
+      width: 295px;
       font-size: 17px;
       line-height: 30px;
-      width: 44%;
+      padding: 0;
       margin-bottom: 37px;
     }
 
     &__table {
-      width: 44%;
+      width: 295px;
       padding: 0;
-      margin-bottom: 55px;
+      margin: 0 0 55px;
     }
 
     &__photo {
@@ -165,15 +168,12 @@
     }
 
     &__description {
-      width: 28%;
       padding-left: 175px;
       margin-bottom: 50px;
     }
 
     &__table {
-      width: 44%;
-      padding-left: 175px;
-      margin-bottom: 105px;
+      margin: 0 0 105px 175px;
     }
 
     &__photo {
