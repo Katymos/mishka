@@ -6,11 +6,18 @@
     position: relative;
     text-align: center;
     padding: 18px 0;
-    border-bottom: 1px solid #ececec;
 
     &-link {
       display: inline-block;
       vertical-align: middle;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -81,7 +88,7 @@
     border-bottom: 1px solid #ececec;
 
     & a {
-      display: inline-block;
+      display: block;
       vertical-align: middle;
       padding: 27px 0;
       font-size: 17px;
@@ -99,8 +106,8 @@
   &__search {
     padding: 24px 0;
     border-bottom: 1px solid #ececec;
-
     font-size: 17px;
+    cursor: pointer;
 
     &-form {
       display: inline-block;
@@ -114,21 +121,29 @@
         color: #000;
         font-size: 17px;
         font-weight: bold;
+      }
 
-        &:focus {
-          color: transparent;
-        }
+      &:focus::-webkit-input-placeholder {
+        color: transparent;
       }
     }
   }
 
   &__basket {
-    padding: 25px 30px;
-    border-bottom: 1px solid #ececec;
-
+    padding: 24px 0;
     font-size: 17px;
     color: #000;
     font-weight: bold;
+    cursor: pointer;
+
+    & a {
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.3;
+      }
+    }
   }
 
   &__icon {
@@ -156,6 +171,7 @@
   background-position: top center;
   background-color: #fafafa;
   text-align: center;
+  border-top: 1px solid #ececec;
   margin-bottom: 25px;
 
   & h1 {
@@ -176,8 +192,14 @@
     line-height: 24px;
     color: #fff;
     font-weight: bold;
-    padding: 28px 30px;
     text-align: left;
+
+    & a {
+      display: block;
+      padding: 28px 30px;
+      color: #fff;
+      text-decoration: none;
+    }
 
     &--interior {
       background-color: #63d1bb;
@@ -205,7 +227,6 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1px solid #ececec;
 
     &__logo {
       border-bottom: none;
@@ -240,6 +261,10 @@
       & a {
         padding: 0;
         font-size: 15px;
+
+        &:hover {
+          opacity: 0.3;
+        }
       }
     }
 
@@ -297,9 +322,15 @@
     &__item {
       font-size: 20px;
       line-height: 30px;
-
       width: 50%;
-      padding: 30px 35px 45px;
+
+      &:hover {
+        bottom: 5px;
+      }
+
+      & a {
+        padding: 30px 35px 45px;
+      }
     }
 
     &::after {
@@ -332,6 +363,12 @@
     }
 
     &__item {
+      width: 160px;
+      text-align: left;
+
+      &:nth-of-type(2) {
+        border-left: 1px solid #ececec;
+      }
 
       &:nth-child(even) {
         margin-right: 0;
