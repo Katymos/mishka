@@ -1,0 +1,52 @@
+.page-title {
+  background-color: #f1f1f1;
+  padding: 105px 0 55px;
+  margin-bottom: 30px;
+
+  & h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 27px;
+    line-height: 30px;
+  }
+}
+
+@media @tablet-width {
+  .page-title {
+    position: relative;
+    padding: 90px 0;
+    margin-bottom: 70px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url(../img/zigzag-tablet.png);
+      height: 24px;
+    }
+
+    & h1 {
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .page-title {
+    padding: 90px 0 125px;
+    margin-bottom: 110px;
+
+    &::after {
+      background-image: url(../img/zigzag-fill-desktop.png);
+      height: 34px;
+    }
+
+    & h1 {
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
+}
