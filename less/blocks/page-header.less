@@ -339,7 +339,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-image: url(../img/zigzag-tablet.png);
+      background-image: url(../img/zigzag-fill-tablet.png);
       height: 24px;
     }
   }
@@ -429,6 +429,11 @@
 
     &__items {
       margin: 360px 0 0;
+    }
+
+    &::after {
+      background-image: url(../img/zigzag-fill-desktop.png);
+      height: 34px;
     }
   }
 }

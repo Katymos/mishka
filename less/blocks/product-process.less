@@ -3,11 +3,31 @@
   border: 1px solid #ededed;
   margin: 0 auto 60px;
 
+  &:hover {
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
   &__title {
+    position: relative;
     font-size: 17px;
     line-height: 24px;
-    padding-left: 60px;
+    padding-left: 80px;
     margin: 30px 0;
+
+    &::before {
+      content: '';
+      background-image: url(../img/icon/icon-video.png);
+      width: 32px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      margin-top: -11px;
+    }
   }
 
   &__video-block {
@@ -25,6 +45,11 @@
       margin-top: -39px;
       margin-left: -51px;
       cursor: pointer;
+    }
+
+    &:hover::after {
+      transform: scale(1.2);
+      transition: all 0.2s;
     }
 
     & img {
@@ -63,6 +88,10 @@
       padding-left: 105px;
       margin-bottom: 0;
 
+      &::before {
+        left: 40px;
+      }
+
       & br {
         display: none;
       }
@@ -92,12 +121,22 @@
 
     &__title {
       padding-left: 75px;
-      margin-top: 95px;
+      padding-top: 95px;
+      margin-top: 0;
+
+      &::before {
+        top: 13%;
+        left: 75px;
+      }
+
+      & br {
+        display: block;
+      }
     }
 
     &__text {
       position: absolute;
-      top: 135px;
+      top: 145px;
       right: 0;
       width: 24%;
     }
