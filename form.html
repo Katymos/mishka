@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>HTML Academy: Mishka</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+<symbol viewBox="0 0 51 26" id="icon-arrow-left"><title>icon-arrow-left</title><image width="51" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAaCAQAAACwC6xfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMQKR7mtrZBAAAAX0lEQVRIx2NgwAUSGN4zGDDQGCQw/Gf4T2uLIJZALFKgvSX/Gc4zCIxaMmrJqCUELKENbGBiSGCYTxvXIwMm2lsBsWYBQyJ9rKJTEhi1aNSiEWMRDZscCIvo0lKjoiUA1hOrJU35RlEAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 51 26" id="icon-arrow-right"><title>icon-arrow-right</title><image width="51" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAaCAQAAACwC6xfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMQKDrDrmPRAAAAZ0lEQVRIx+3WsQ2AQAiF4T9O4Cis4AaO4Ka3gpvgBlh4sdPqHokR6CjeFxIKYFRtODYs7REJQg2tRG8pZHhBBf0KavdI047BpFuq10zD9AyQsc3Bwq4ITrm1Qgr5OJL2ciQ9UBf0gpwAhKwk8s5UzwAAAABJRU5ErkJggg=="/></symbol>
+<symbol viewBox="0 0 21 18" id="icon-cart"><title>icon-cart</title><image id="icon-cart-cart.svg" class="cls-1" width="21" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAMAAACDzGUcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8AAAChcy5EAAAAEXRSTlMAIzMGDS0mExApChYaMAMdIJzJR6MAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QMDEQcUDKY8RAAAAIBJREFUGNNtUNESwyAIoylW20Lr/3/tUDort+Uh3OUkiRA5Fqy0YqEARjJO4KBuyMYZ2ywW7H3uKJP6XXWjB++mOxEdzJxwsuNEMj4I/0AClQiFtKQrlLx64v0EvNG3sfy4SutoPjOgvXsNHyqoYTrGG+ikKsZt63Ct48Y5NGg9PwwlBLESLjgmAAAAAElFTkSuQmCC"/></symbol>
+<symbol viewBox="0 0 15 29" id="icon-fb"><title>icon-fb</title><image width="15" height="29" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAdCAMAAABCFsboAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8AAAChcy5EAAAAEHRSTlMAIHCAMBCvn8/vj0BQv99ghC/KTQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMQKjARTehNAAAAsElEQVQY01XR2xLDIAgE0FVi1CDJ/v/XFi9tKi/OcUR2FBgVonjFYyqdXJUHC+slqk0quzNLmAenjbcCT2+6p5lSdVV7pk80mmKV8UCk4DWgvH7Ow+XJZwKi5NvP64gTgbFK35fcV99UDeseH3GzmDUPreIxgNaDyJF+6QBhoRpltblZ02h+LWUzH+5Ou0/8Wfuk3RW2+fq33x2wz4/u9nUjrfJ9sPEWRdLXwb9u/Rw+MG0K1lJrqBoAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 33 38" id="icon-features-1"><title>icon-features-1</title><image width="33" height="38" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAmCAMAAAB9PwLlAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAABZNXjjAAAAEXRSTlMAABBAj6+fMCCA3+9wv2BQz0eF02UAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QMDECUOV7TpKQAAATZJREFUOMt9lFuCwyAIRY3v+KB1/5udqCjQOuUrMUeBe4lKydDGaLFwfXy37Qn7g3BthP+XMA0jnIingHgv4o67nE2MAtIiMpWzCN8OYRkR2jECEfeZKAeiPttM3QUTAbjkhCztRYTGLrDDON8S7yWM/urqfeTJgRPafxNec8LRsT0y2fOhR5mv5YcehQO8W1IsWbvd4cTrrCnTQ6UT8BZ6HJCEeug4BSnOFbt9L9WVKXAYjVYbhD0N5kfblVMKcwKzZygH+LKIafy0pxcQ1ghk9GA8Qy/H+14A5L1RzBcsX4DWbjmj8AW0qFiaNRJ8T734n7Ym5M0WzKXkIT0Pz+Gm6jHTUhIeZY2+8MSBJe1lrb+BTrGWAO5+IIV2nUnMOg47jznq/IYxgvHxdAdp8KPx6oFuu+sPyJsse8ImJXsAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 47 27" id="icon-features-2"><title>icon-features-2</title><image width="47" height="27" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAbCAMAAADbEiYlAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAAD90GwXAAAAEHRSTlMAAGDfUM+/QIAg768QcJ8w7iqiSAAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMQJTnvCUwmAAAAlElEQVQ4y83U3QqAIAwF4DX/lqX2/k/bJDG6yRNEdC7jU2y6EbHZ0Bg7EcO6hkl3dx6LUkO6KNBNpjOi9iM/yyB89WFUGH/r4yJLxL2sevBVUJ/arybMu14bB/nUfYL8eR0B8tw9Qz53n7H6lMYLWM94LCgR9HokG2y+fPGvvp+h/09/adPnUXO1+Dofns4fso/m2w6uqDALylU5YQAAAABJRU5ErkJggg=="/></symbol>
+<symbol viewBox="0 0 34 27" id="icon-features-3"><title>icon-features-3</title><image width="34" height="27" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAbCAMAAAAu7K2VAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAAC2WhVlAAAAD3RSTlMAACCAzxBw75/fQL8wj69yoTsgAAAAAWJLR0QQlbINLAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+EDAxAmIk5B1gkAAACtSURBVCjPrdPREsMQEAXQaxEi0v3/vy1KihB96H1bc2ZHsgsIIak4REmNFF1qAoSIJ5vhHLPd6kQsV7F9HYnkJrKvBYgXobbtKBZmRQxWgvlPZF/f5YcvcivigONZHGEAftEkjvF8EudnGdRcqLwvejoEozOBnxjjy9bNTBQXGZokvgR0u7NKoiLQr+6X5ddQkW6JZTltCPw19d1hTMITyy00ZiTcOuyGpfpEiDf/wScTgy5r4wAAAABJRU5ErkJggg=="/></symbol>
+<symbol viewBox="0 0 35 34" id="icon-features-4"><title>icon-features-4</title><image width="35" height="34" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAMAAADiW5DOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAABZNXjjAAAAEXRSTlMAACBwr+/fQL9QzzCPYIAQn5LMP6cAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QMDECcJ++YeCAAAAYVJREFUOMuFVFdyxSAMFGCKwYB9/8tGBVEymYl/nh9etEUCgPVYd/mPnnA5q4vGmIWI6duf6y/M7XdItlDKiXGhgN0KPbj0fW7HVFxuAG0g/A39wp961sEvqUMMyoMvuUBpimm0mOf2V7ZcHar/mmAKV+3vkFEZiFp4xWkdfH87G8OKzIMWuHKETpiIMjyv2kzQKjy0gxT6iphAYKkOZRAAPNNpMKSG/jhRQwRSkXkSScU6VWSU/LIR5ckiIRfU02XTjdqZpwnPo1aMS+CFPFg1MrYIDysFLh4HT5oJFC9B4wbCkEiAd7VMGqqRTcxuZGtofwZmD2w2lIMeX+AMbGsoCBKnannfjFBDy3gz5gY1EoeRoPoenSoDdg9Mg54JEAXRLiPa0DaM8kqg2ViTKQ3tWYAjotvoMK+gpzGZqjmrOpnU0CR1R6KfHbO6JlNzeHWq2jo7dQVNPrtOlV3n6z7PIBngivY4g0qvJ5U75H7fCfG4E8hY/+9uSeWPu4XvqCBM5x31AylQJ9yVaMm5AAAAAElFTkSuQmCC"/></symbol>
+<symbol viewBox="0 0 55 23" id="icon-features-5"><title>icon-features-5</title><image width="55" height="23" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAXCAMAAACYqSdCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAABZNXjjAAAAEXRSTlMAAM+vEO9QQJ+/j3BgIN+AMK5hmhkAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QMDECcwpOOWAAAAAK9JREFUOMullEkSwyAMBDGLQZjF/P+zwTgFhL3I3HTomhGSQNjlIhRNdLxC9Bdk5yJXgjPLyFUg42tcBTpBgMUCg7w4bXE1WAuLBocoD5KsDz6c0gUXpMzI0COXc6BKjo+zEh8qpGFW59w56U/5PDGyTpydcH42IlWSrnK+PchK86/fbn/ohiHXe8/Hckg25/fdFzuYfGtfNvezvgcBybl7DyVm1u5v8953/5fN/+wDKwUsbk03k5QAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 33 32" id="icon-features-6"><title>icon-features-6</title><image width="33" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAMAAACrZuH4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAABZNXjjAAAAEXRSTlMAACCfz2CvMO+/EICPQN9wUBkqcmkAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QMDECgTgRz7vQAAALNJREFUOMvtkMESgyAMRFNQSYBo8/8/2w1qCz3UazvTvZBd37BBoqYQzWyad0PzBLeENt/2KLE1SYbJshtOHYFMSgU2Zcq4gGtBtLyIAMAPfIu0gPMCmBehZsXPvGIwW71rJOhMtS2gPsahhSqq5yNHEVCswaEjfDvjuOndr9C6Pp8CImzFdTzXWM4ptnwLdAaHhGQMmOyCsB8idFSi9JbQlfyvJ+lUqfY2NUI/7KF/4luJB38tMGzCDkMRAAAAAElFTkSuQmCC"/></symbol>
+<symbol viewBox="0 0 27 34" id="icon-htmlacademy"><title>icon-htmlacademy</title><image width="27" height="34" xlink:href="data:imagepng;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAMAAACZf1ICAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEVj0bv///9j0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0btj0bsAAABZNXjjAAAAEXRSTlMAADBAUIC/368gYO8Qn49wz6Cmyx0AAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QMDECsu8lnkbwAAAUdJREFUKM91k1uiwyAIRIkKvpOw/81eQGNy29S/9AgOMxRAjvMBkSgyc6SEGHze5AARvx8iYLtMiMU7aeF90RZVfxbW4Hm2eZoxeGXbBwvJ/2CZuHJvL6ztXAtgrccXK5V3FZU7R/+POWJyU4snTnmx0e7WKT2wDXbMdvcMDTkGY6sdAOGUmWn40u8Bj1rLlNlHXV8d0SfpIsSfow654mSJMZy8u369p4ZEb8xhjeFgudzWfCHKTKolSVPJhx6z717MwqZ3LOon66wFMcA+M3+wXKTMR678zYjcLmX4xqQExWM6B7Ik7oxESwnRSMXPbLM4Ym5cyRs7x9xgWs4R7CYfLPbK1TztjAesGDRSSfY21PKT+FjThbERl6HKVBLpVsC1ScPQeTFYZ1gbqG3mA1Ppekefj2j11/Y+/gk2+lzOTwYNRe+Ntj/MExhRWV/rJgAAAABJRU5ErkJggg=="/></symbol>
+<symbol viewBox="0 0 22 21" id="icon-insta"><title>icon-insta</title><image width="22" height="21" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAMAAAB1/u6nAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8AAAChcy5EAAAAEHRSTlMAYM+/gHAQn+/fjzBAUCCvibRMeAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMQKgQw+Rz4AAAA4klEQVQY002RiY7EMAhDCZDmTv3/XzsO0+2OFanilcMkkhQhe+WeLwkEKMxLNbV2QBYCpHPc+0h5Fma1IuDvBUz0kfecyaKfwIHNMvgeM+ticWnEWmGVrZrxE+IcQY1QvZh1MoaBVURyzSdTGzOHMFUaiPWO4utqhkIMsYNxyuEiZmgvnscO0JYo/QV2Npu0/YjbMDx4/uJEC/vBG26PZTsTiG/UIQW8J3r2QjvPSOyLNbWUdWvQHVhtrz3CeS2kkgJXHXUl+ZfHSHT11nd9MXeT8X0e3o/+vVo9m/bvO/3K8gfpfxCsNsM8+AAAAABJRU5ErkJggg=="/></symbol>
+<symbol viewBox="0 0 41 62" id="icon-interior"><title>icon-interior</title><image id="icon-interior-interior.svg" class="cls-1" width="41" height="62" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAA+CAMAAACBbcLnAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEUUkID///8UkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAAAAA3RlsHAAAAEnRSTlMAABh4gGhYMFBwEEgIKGAgQDiIFuSCAAAAAWJLR0QSe7xsAAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+EDAxAjNMfilx0AAAFLSURBVEjHxdXbroQgDAVQ5SoIBf//Zw/I1RgoD07OziQTx5XYgVK37RVCGSX1ai95w40zxvhQCjaOeEg6kbSXhM1COimnUnbymMqjk2oqVZOazaOrlIiUVZ6IPKvkiORFGobFZGlRabPEykyFRgmohCxRyFiSbkG6W/oF6W+Jl3kXulZmLBTr4hIS5LUkr31+2FrEPj9sLXRfLDMUGrqYl2WC3H0U8nP6O3KzYbDo+IswYbsi8Xk3qAsNGf8FhKYjNk8Gr/z9bUCF+/GjwJQ7w7kUVkO0i9kEC9sL/yiJI4vykbHUAmKExqQpbUA1IlsPHohsRwU+k2JZtiN9IrKNCYmtUpUGW/nyl8r7cCz9s8yJLIU6vEPSdlK8Q/KKigWZCr0WpHuU+UknL0tTXssK26M20Aj2dOlT5Ed1Wv+MHcn3xL8G8v1igh/LP1OvGaA8Z5TaAAAAAElFTkSuQmCC"/></symbol>
+<symbol viewBox="0 0 25 24" id="icon-phone"><title>icon-phone</title><image id="icon-phone-phone.svg" class="cls-1" width="25" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAQAAAClvJ5NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMRCx5AxppWAAABgklEQVQ4y33UUWujUBAF4O/qkoIgCEJKw4YtFAr9//9lC0JByNKHsIKQ4lLZy92HpEbbZOfF8c6ccc6cuQbXbOMOgzddGuaBAHKFaBFQq+UKcPDrDAuo3Mtx0Hz5Vq6yscIu7T8glYcpodV9xiSEtY1cl1rI3M/i5cLfqOSQ9hpRHdbw7Xh4EXIHYe81xTSExqNteEtDtuhiZTX5v7U60dpjKEiDV3xnCeFm8kad1k8HhR8hJ+0NylBm4gwQvX8qMabGoHAL9qizmRqjxjiT8kkFXrAGPcrM25T0shDzr8KDijTq5aEkRYNVpp+S1ouW9naowZ9pmvGo/tNpLXj+tDSlmAbCyo33NBIKeUA9yTl4vqT+0jJ0E+lisQtX7KhLO73Xp+7/Y+H03M7Id1OJQn7kcAkyHwIHrXEqc9DpU/wKyT3OQNGwWNKoTf2cy/GwmY04XwDIbZf0z6D+KuvVJQjRi91iUc82DSFcCOZurRdXj6j5+GEE16xSKU/t9HbnUf8DUL+DiaxgaEQAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 18 19" id="icon-search"><title>icon-search</title><image id="icon-search-search.svg" class="cls-1" width="18" height="19" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAMAAACqTK3AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8AAAAMIbvwAAAAEHRSTlMAEBoKLTMmIBMwAwYNIxYp5v0/MQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMRCBMVWrUoAAAAgElEQVQY042PyxLEIAgEkXWMKEn+/28DwUftnnYuVjWFzRB5Els+tJMy3pQFD6zUIAwIN6LuI3XSjYyFCuSxpvMLjlVBWZ4mOO0BeLvLO/8P5bDQsB9huSY6w26WebTdE/bk7ZJq9aZ3i6Nll5ysR3Hhfi9GTS3+OqPvOKNfxtcDryEEQjW9STEAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 61 61" id="icon-toy"><title>icon-toy</title><image id="icon-toy-toy-svg" class="cls-1" width="61" height="61" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEUUkID///8UkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAUkIAAAAA3RlsHAAAAEnRSTlMAACBAKAgQUIBgGHgwcEhoOFjFc+wGAAAAAWJLR0QSe7xsAAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+EDAxAkFcTKEYQAAAJkSURBVEjH7ZfJAp0gDEV5RCYB0f//2YIyBRC1m27KDuVIyE1CJOR2UDjHwtDTXz3uUC5kHop+pFct62G+0QrBUn+jBabtF5ptG9rc7Y6+pnctgVBho9WHIVRKwZ/pldLFeQQuzfw49aLhK+Bn9zTfXbZV4I+a4gFBh7RBIu0obtCrg/X0ir0snYkHZUsjn4SeprIbWvlh++fHwHKHt66nB/7o2tFGk71sYwFFG6VlpgUHwRBN/U7h7ObMKrM2sUrD6c9Xe/A4ePUKfeVTo7zGdB2pW7CORprrXqNK4XBuRMf8E2nvyytiLYHTZIlbSg7ABQMr57YxkMDQBQR2f4x2f2ZfbaI7FEc+37V8P2yKVsKTRcjYDW2vAc+K3hpyrFYiATE5RCywOhCz2ExQ4t9mlxhb6DNBzX6laKFdTjHvvUAHH2SHpg2w+Esy2qT8Pv180f6cqWjzaL6pYe7KqpONqxIdvkqQeiqfZ920LBaGAycLM13X/BgPUikAoeIkeef3K96p6ODNoXqXSiNlEF2tobieiHFUYDpE0aDMlWLeRGRLD9Tr/DmjQ/bU6hUtj27liK53O7o4eqSbGxvH8Au6Uq9V6RUtda5UbLtbc09n9SZ1Y0ZLRcjwjvlP/1Pa/T2t11k0PNCC/2aROKXPwj7LggmtTX0LLvYTvTHct6Rr+Q2t1rbrGVWeMW2XcZ/aVr0RraF0im2Xi9Ub0Aef9cio2ne0o0/9eaVeQ1+16qm7z/UT07GwP/4bpNpd0yq1Yy/+ai71Cl2ak3d/c0G9RGuoivsrOqgX6XwbfaEJO68z3lxKiP4DKUZIFqJs1lYAAAAASUVORK5CYII="/></symbol>
+<symbol viewBox="0 0 24 20" id="icon-twitter"><title>icon-twitter</title><image width="24" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAAiHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8iHx8AAAChcy5EAAAAEHRSTlMAQK8QUO/fYL9wnyCAz48wIb7VYQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhAwMQKxFEP8lSAAAAwUlEQVQY021QW7LFIAjDB0IV2+x/tQdttb0zlx8whEwM0T8VEGaP8QMmoszlHgFZVAXAwM3MUBxzqog5jGU8mj8NSdFd1TikaETjzBsdzheGBhVqzEOCa5oXaJSq0/yqDT/IU1lvc+2ctFFTiEievqstoPD1ZxHXQpbxpYTrCQA9f3BBX5IsX62+g8geAm/coG9wgfua/XdtJSe1bMcXP5F7IF5dXvx8Rw5L8sTGfeNhFj3NLLqHr28KpmUIgi1t8Ad9NQf9ckdSWAAAAABJRU5ErkJggg=="/></symbol></svg>
+
+<!-- Start: Page-header -->
+<header class="page-header">
+
+  <!-- Start: Container -->
+  <div class="container">
+
+    <nav class="main-nav">
+
+      <div class="main-nav__logo">
+        <a href="index.html" class="main-nav__logo-link">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Mishka">
+          </picture>
+        </a>
+      </div>
+
+      <span class="main-nav__toggle main-nav__toggle--closed">Открыть меню</span>
+
+      <div class="main-nav__wrapper main-nav__wrapper--closed">
+
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+          <li class="main-nav__item main-nav__item--hidden"><a href="#">Новые поступления</a></li>
+          <li class="main-nav__item main-nav__item--hidden"><a href="#">Распродажа</a></li>
+        </ul>
+
+        <div class="main-nav__search">
+          <span class="main-nav__icon">
+            <svg>
+              <use xlink:href="#icon-search">
+            </svg>
+          </span>
+          <form method="post" action="/" class="main-nav__search-form">
+            <input type="search" name="search" placeholder="Поиск по сайту">
+          </form>
+        </div>
+
+        <div class="main-nav__basket">
+          <span class="main-nav__icon">
+            <svg>
+              <use xlink:href="#icon-cart">
+            </svg>
+          </span>
+          <a href="#">Корзина: пока пуста</a>
+        </div>
+
+      </div>
+
+      <div class="main-nav__delivery">Бесплатная доставка по России</div>
+
+    </nav>
+
+  </div>
+  <!-- End: Container -->
+
+  <!-- Start: Page-title -->
+  <div class="page-title">
+
+    <!-- Start: Container -->
+    <div class="container">
+      <h1>Вязание на заказ</h1>
+    </div>
+    <!-- End: Container -->
+
+  </div>
+  <!-- End: Page-title -->
+
+</header>
+<!-- End: Page-header -->
+
+
+
+  <!-- Start: Container -->
+  <div class="container">
+
+    <!-- Start: Form-text -->
+    <div class="form-text">
+      Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+    </div>
+    <!-- End: Form-text -->
+
+  </div>
+  <!-- End: Container -->
+
+</div>
+<!-- End: Form-text -->
+
+  <form action="#" method="post" class="order-form">
+
+    <!-- Start: Order-form__wrap -->
+    <div class="order-form__wrap">
+      <div class="container">
+        <fieldset>
+          <legend class="order-form__legend"><span>Тип</span></legend>
+          <input type="radio" name="type" id="radio-1" checked>
+          <label for="radio-1">Аксессуар для<br> интерьера</label>
+          <input type="radio" name="type" id="radio-2" checked>
+          <label for="radio-2">Детская игрушка</label>
+        </fieldset>
+      </div>
+    </div>
+    <!-- End: Order-form__wrap -->
+
+    <!-- Start: Order-form__wrap -->
+    <div class="order-form__wrap order-form__wrap--color">
+      <div class="container">
+        <fieldset>
+          <legend class="order-form__legend"><span>Цвет</span></legend>
+          <input type="checkbox" id="checkbox-1" name="checkbox-1" value="1" checked>
+          <label for="checkbox-1">Белый</label>
+          <input type="checkbox" id="checkbox-2" name="checkbox-2" value="2" checked>
+          <label for="checkbox-2">Серый</label>
+          <input type="checkbox" id="checkbox-3" name="checkbox-3" value="3">
+          <label for="checkbox-3">«Тиффани»</label>
+          <input type="checkbox" id="checkbox-4" name="checkbox-4" value="4">
+          <label for="checkbox-4">Черный</label>
+          <input type="checkbox" id="checkbox-5" name="checkbox-5" value="5">
+          <label for="checkbox-5">Розовый</label>
+          <input type="checkbox" id="checkbox-6" name="checkbox-6" value="6">
+          <label for="checkbox-6">Оранжевый</label>
+        </fieldset>
+      </div>
+    </div>
+    <!-- End: Order-form__wrap -->
+
+    <!-- Start: Order-form__wrap -->
+    <div class="order-form__wrap">
+      <div class="container">
+        <fieldset>
+          <legend class="order-form__legend"><span>ФИО</span></legend>
+          <div class="order-form__field">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+          </div>
+          <div class="order-form__field">
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+          </div>
+          <div class="order-form__field">
+            <label for="second-name">Отчество:</label>
+            <input type="text" id="second-name" name="second-name" placeholder="Отчество, если желаете">
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <!-- End: Order-form__wrap -->
+
+    <!-- Start: Order-form__wrap -->
+    <div class="order-form__wrap order-form__wrap--color">
+      <div class="container">
+        <fieldset>
+          <legend class="order-form__legend order-form__legend--less"><span>Тел</span></legend>
+          <input type="tel" name="phone" placeholder="+7 ХХХ ХХ ХХ*" required>
+        </fieldset>
+        <fieldset>
+          <legend class="order-form__legend order-form__legend--less"><span>E-mail</span></legend>
+          <input type="email" name="email" placeholder="Ваш Email*" required>
+        </fieldset>
+      </div>
+    </div>
+    <!-- End: Order-form__wrap -->
+
+    <!-- Start: Order-form__wrap -->
+    <div class="order-form__wrap">
+      <div class="container">
+        <fieldset>
+          <legend class="order-form__legend order-form__legend--less"><span>Доп</span></legend>
+          <textarea placeholder="Опишите все ваши пожелания к заказу" name="comment"></textarea>
+        </fieldset>
+
+        <div class="order-form__footer">
+          <div class="order-form__footer-remark">
+            *Поля обязательны для заполнения
+          </div>
+          <button type="submit" class="btn">Отправить заказ</button>
+        </div>
+
+      </div>
+    </div>
+    <!-- End: Order-form__wrap -->
+
+  </form>
+</div>
+<!-- End: Container -->
+
+<!-- Start: Page-footer -->
+<footer class="page-footer">
+
+  <!-- Start: Container -->
+  <div class="container">
+    <div class="page-footer__logo">
+      <a href="#">
+        <img src="img/logo-footer.svg" width="102" height="34" alt="Mishka">
+      </a>
+    </div>
+    <div class="page-footer__social">
+      <a class="page-footer__icon page-footer__icon--inst" href="#">
+        <svg>
+          <use xlink:href="#icon-insta">
+        </svg>
+      </a>
+      <a class="page-footer__icon page-footer__icon--fb" href="#">
+        <svg>
+          <use xlink:href="#icon-fb">
+        </svg>
+      </a>
+      <a class="page-footer__icon page-footer__icon--tw" href="#">
+        <svg>
+          <use xlink:href="#icon-twitter">
+        </svg>
+      </a>
+    </div>
+
+    <div class="page-footer__copyright">
+      Разработано
+      <a href="#" class="page-footer__icon-academy">
+        <svg>
+          <use xlink:href="#icon-htmlacademy">
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- End: Container -->
+
+</footer>
+<!-- End: Page-footer -->
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
