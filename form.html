@@ -101,7 +101,7 @@
 </header>
 <!-- End: Page-header -->
 
-
+<main>
 
   <!-- Start: Container -->
   <div class="container">
@@ -115,9 +115,7 @@
   </div>
   <!-- End: Container -->
 
-</div>
-<!-- End: Form-text -->
-
+  <!-- Start: Order-form -->
   <form action="#" method="post" class="order-form">
 
     <!-- Start: Order-form__wrap -->
@@ -205,7 +203,7 @@
           <div class="order-form__footer-remark">
             *Поля обязательны для заполнения
           </div>
-          <button type="submit" class="btn">Отправить заказ</button>
+          <button type="submit" class="btn order-popup-link">Отправить заказ</button>
         </div>
 
       </div>
@@ -213,8 +211,9 @@
     <!-- End: Order-form__wrap -->
 
   </form>
-</div>
-<!-- End: Container -->
+  <!-- End: Order-form -->
+
+</main>
 
 <!-- Start: Page-footer -->
 <footer class="page-footer">
@@ -257,6 +256,29 @@
 
 </footer>
 <!-- End: Page-footer -->
+
+<!-- Start: Order-popup -->
+<div class="order-popup">
+  <div class="order-popup__title">Добавить<br> в корзину</div>
+
+  <form action="/" method="post" class="order-popup__form">
+
+    <div class="order-popup__form-inner">
+      <input type="radio" name="size" id="radio-1" checked>
+      <label for="radio-1">S</label>
+
+      <input type="radio" name="size" id="radio-2">
+      <label for="radio-2">M</label>
+
+      <input type="radio" name="size" id="radio-3">
+      <label for="radio-3">L</label>
+    </div>
+
+    <input type="submit" value="Добавить" class="order-popup__submit">
+  </form>
+</div>
+<div class="order-popup-overlay"></div>
+<!-- End: Order-popup -->
 
 <script type="text/javascript" src="js/custom.js"></script>
 </body>
