@@ -69,6 +69,16 @@
       background-color: #fff;
     }
 
+    &:hover::before {
+      content: '';
+      box-shadow: 0 0 0 2px #62d1ba;
+    }
+
+     &:active::before {
+      content: '';
+      box-shadow: 0 0 0 2px #c7c7c7;
+    }
+
     &[for^="radio"]::before {
       border-radius: 50%;
     }
@@ -116,6 +126,11 @@
     &[type="tel"] {
       margin-bottom: 30px;
     }
+
+    &:hover,
+    &:active {
+      border-bottom: 2px solid #62d1ba;
+    }
   }
 
   & textarea {
@@ -130,6 +145,11 @@
     outline: none;
     box-sizing: border-box;
     margin-bottom: 10px;
+
+    &:hover,
+    &:active {
+      border: 2px solid #62d1ba;
+    }
   }
 
   &__footer {
