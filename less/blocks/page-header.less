@@ -109,6 +109,10 @@
     font-size: 17px;
     cursor: pointer;
 
+    &:hover svg {
+      fill: #63d1bb;
+    }
+
     &-form {
       display: inline-block;
     }
@@ -136,12 +140,16 @@
     font-weight: bold;
     cursor: pointer;
 
+    &:hover svg {
+      fill: #63d1bb;
+    }
+
     & a {
       color: #000;
       text-decoration: none;
 
       &:hover {
-        opacity: 0.3;
+        opacity: 0.6;
       }
     }
   }
@@ -150,15 +158,6 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
-
-    & svg {
-      width: 21px;
-      height: 18px;
-    }
-
-    &:hover svg {
-      fill: #63d1bb;
-    }
   }
 
   &__delivery {
@@ -211,14 +210,8 @@
 
     &__icon {
       position: absolute;
-      top: 50%;
-      right: 30px;
-      margin-top: -30px;
-
-      & svg {
-        width: 41px;
-        height: 61px;
-      }
+      top: 30px;
+      right: 35px;
     }
   }
 }
@@ -263,7 +256,7 @@
         font-size: 15px;
 
         &:hover {
-          opacity: 0.3;
+          opacity: 0.6;
         }
       }
     }

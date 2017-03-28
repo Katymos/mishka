@@ -14,36 +14,22 @@
     height: 29px;
     margin-right: 30px;
 
+    &:hover {
+      fill: #62d1ba;
+    }
+
+    &:active {
+      fill: #62d1ba;
+      opacity: 0.3;
+    }
+
     &:last-child {
       margin-right: 0;
     }
 
-    &--inst svg {
-      width: 22px;
-      height: 21px;
-      vertical-align: inherit;
-    }
-
-    &--fb svg {
-      width: 15px;
-      height: 29px;
-    }
-
+    &--inst svg,
     &--tw svg {
-      width: 24px;
-      height: 20px;
       vertical-align: inherit;
-    }
-
-    &-academy {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 25px;
-
-      & svg {
-        width: 27px;
-        height: 34px;
-      }
     }
   }
   &__social {
@@ -66,11 +52,27 @@
     font-size: 19px;
     font-weight: bold;
     text-align: center;
-    cursor: pointer;
 
-    &:hover {
+    & span:hover {
       opacity: 0.3;
     }
+
+    & svg {
+      fill: #63d1bb;
+
+      &:hover {
+        fill: #46c1ae;
+      }
+
+      &:active {
+        fill: #bde3dd;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
   }
 }
 
@@ -85,15 +87,33 @@
 
     &__logo {
       display: block;
+
+      &:hover svg {
+        fill: #63d1bb;
+      }
+
+      &:active svg {
+        fill: #bde3dd;
+      }
     }
 
     &__social {
       padding: 0;
       margin: 0;
+      align-self: center;
+      margin-left: 75px;
 
       &::after {
         display: none;
       }
+    }
+
+    &__icon {
+      margin-right: 25px;
+    }
+
+    &__copyright {
+      padding-top: 8px;
     }
   }
 }
